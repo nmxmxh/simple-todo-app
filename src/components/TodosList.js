@@ -30,6 +30,8 @@ const Style = {
     h2.empty-list {
       text-align: center;
       margin-top: 20px;
+      font-weight: 400;
+      font-size: 14px;
     }
   `
 }
