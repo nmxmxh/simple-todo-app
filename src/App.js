@@ -1,11 +1,10 @@
 import React from "react";
-import TodosList from "./TodosList";
-import Header from "./Header";
-import InputTodo from "./InputTodo";
-// import uuid from "uuid";
+import TodosList from "./components/TodosList";
+import Header from "./components/Header";
+import InputTodo from "./components/InputTodo";
 import { v4 as uuidv4 } from "uuid";
 
-class TodoContainer extends React.Component {
+class App extends React.Component {
   state = {
     todos: [
       {
@@ -64,7 +63,7 @@ class TodoContainer extends React.Component {
 
   render() {
     return (
-      <div className="container">
+      <div className="App">
         <Header />
         <InputTodo addTodoProps={this.addTodoItem} />
         <TodosList
@@ -76,4 +75,5 @@ class TodoContainer extends React.Component {
     );
   }
 }
-export default TodoContainer;
+
+export default App;
