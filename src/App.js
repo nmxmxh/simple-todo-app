@@ -3,6 +3,7 @@ import TodosList from "./components/TodosList";
 import Header from "./components/Header";
 import InputTodo from "./components/InputTodo";
 import { v4 as uuidv4 } from "uuid";
+import styled from "styled-components";
 import "./App.css"
 
 function App() {
@@ -39,11 +40,10 @@ function App() {
 
   function handleDeleteTodo(id) {
     setTodosState({
-      todos: [
+      todos: 
         todosState.todos.filter((todo) => {
           return todo.id !== id;
         }),
-      ],
     })
   }
 
@@ -59,7 +59,7 @@ function App() {
   }
 
     return (
-      <div className="App">
+      <Style.AppContainer className="App">
         <Header />
         <InputTodo addTodo={handleAddTodo} />
         <TodosList
@@ -67,8 +67,21 @@ function App() {
           changeTodo={handleTodoChange}
           deleteTodo={handleDeleteTodo}
         />
-      </div>
+      </Style.AppContainer>
     );
+}
+
+const Style = {
+  AppContainer: styled.div`
+    padding: 25px;
+    width: 45vw;
+    margin: auto;
+
+    @media (max-width: 768px) {
+      width: 95%;
+      padding: 10px;
+    }
+  `
 }
 
 export default App;
