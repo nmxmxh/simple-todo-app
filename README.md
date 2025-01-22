@@ -17,7 +17,7 @@ Some of the most important features to implement in this group todo app would be
 8. Create a default Button components as single source of truth for button functionality.
 
 Considering the given timeline, I decided to implement a few of these features.
-Mostyle focusing on the codebase structure (technical debt), architecture, style implementation, aesthetics.
+Mostly focusing on the codebase structure (technical debt), architecture, style implementation, aesthetics.
 
 I will be using the commit history to record my observations and progress through the challenge.
 
