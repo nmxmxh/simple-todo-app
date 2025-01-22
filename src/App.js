@@ -48,6 +48,7 @@ function App() {
   }
 
   function handleAddTodo(title) {
+    if (!title.trim()) return;
     const newTodo = {
       id: uuidv4(),
       title: title,
