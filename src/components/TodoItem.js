@@ -14,7 +14,7 @@ function TodoItem(props) {
         checked={completed}
         onChange={() => changeTodo(id)}
       />
-      <p className={completed ? "span-completed" : null}>{title}</p>
+      <p className={completed ? "p-completed" : null}>{title}</p>
       <button onClick={() => deleteTodo(id)}>Delete</button>
     </Style.Container>
   );
@@ -57,6 +57,7 @@ const Style = {
       padding: 0;
       margin: 0;
       text-align: left;
+      text-decoration: none;
     }
 
     p.p-completed {

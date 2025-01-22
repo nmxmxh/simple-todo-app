@@ -14,13 +14,14 @@ function InputTodo({ addTodo }) {
     <Style.Container onSubmit={handleSubmit}>
       <input
         type="text"
+        data-testid="todo-input"
         className="input-title"
         placeholder="add todo..."
         value={value}
         name="title"
         onChange={(e) => setValue(e.target.value)}
       />
-      <button type="submit" className="button-submit" disabled={!value.length} value="Submit">submit</button>
+      <button type="submit" data-testid="add-button" className="button-submit" disabled={!value.length} value="Submit">submit</button>
     </Style.Container>
   );
 }
