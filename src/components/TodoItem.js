@@ -1,13 +1,14 @@
+import { animationControls, motion } from "framer-motion";
 import React from "react";
 import styled from "styled-components";
 
 
 function TodoItem(props) {
-  const { deleteTodo, changeTodo, todo } = props;
+  const { deleteTodo, changeTodo, todo, animations } = props;
   const { completed, id, title } = todo;
 
   return (
-    <Style.Container>
+    <Style.Container {...animations}>
       <input
         type="checkbox"
         checked={completed}
@@ -20,13 +21,14 @@ function TodoItem(props) {
 }
 
 const Style = {
-  Container: styled.li`
+  Container: styled(motion.li)`
     list-style-type: none;
     padding: 17px 0px;
     border-bottom: 1px solid #eaeaea;
     display: flex;
     align-items: flex-start;
     justify-content: space-between;
+
 
     input {
       margin-right: 15px;
